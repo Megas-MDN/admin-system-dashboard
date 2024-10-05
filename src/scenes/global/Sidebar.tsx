@@ -47,13 +47,12 @@ const Item = ({
   );
 };
 
-export const Sidebar = ({ isSidebar }: { isSidebar: boolean }) => {
+export const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [isCollapse, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
-  const isCollapsed = isCollapse || !isSidebar;
   return (
     <Box
       sx={{

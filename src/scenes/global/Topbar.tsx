@@ -10,11 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { ColorModeContext } from "../../utils/themeSettings";
 import { tokens } from "../../theme";
 
-export const Topbar = ({
-  setIsSidebar,
-}: {
-  setIsSidebar: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
+export const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
@@ -44,7 +40,7 @@ export const Topbar = ({
             <LightModeOutlinedIcon />
           )}
         </IconButton>
-        <IconButton onClick={() => setIsSidebar((prev) => !prev)}>
+        <IconButton onClick={() => {}}>
           <NotificationsOutlinedIcon />
         </IconButton>
         <IconButton>
